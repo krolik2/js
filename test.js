@@ -1,17 +1,25 @@
-var content = document.getElementById("content");
-var button = document.getElementById("show-more");
+function setUpEvents(){
 
-button.onclick = function(){
+    var content = document.getElementById("content");
+    var button = document.getElementById("show-more");
+
+    button.onclick = function(){
 
 
-    if(content.className == "open"){
+        if(content.className == "open"){
 
-        content.className = "";
-        button.innerHTML = "Show more";
+            content.className = "";
+            button.innerHTML = "Show more";
 
-    }else{
+        }else{
 
-        content.className = "open";
-        button.innerHTML = "Show less";
-    }
+            content.className = "open";
+            button.innerHTML = "Show less";
+        }
+    };
+}
+
+window.onload = function(){
+
+    setUpEvents();
 };
